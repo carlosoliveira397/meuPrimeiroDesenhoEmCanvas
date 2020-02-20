@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Meu primeiro desenho em Canvas</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<canvas id="meuCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
+	<script>
+		var c = document.getElementById("meuCanvas");
+		var caneta = c.getContext("2d");
+		caneta.beginPath();
+		// Criar gradiente
+		var gradiente = caneta.createLinearGradient(1000, 1000, 1000, 0);
+		gradiente.addColorStop(0, '#FF4500');
+		gradiente.addColorStop(1, '#87CEEB');
+
+		// preencher o fundo com o gradiente
+		caneta.fillStyle = gradiente;
+		caneta.fillRect(0, 0, 800, 500);
+		caneta.stroke();
+		caneta.closePath();
+		
+		//grama
+		caneta.beginPath();
+		caneta.strokeStyle = '#228B22';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#228B22';
+		caneta.fillRect(0,500,800,100);
+		caneta.stroke();
+		caneta.closePath();
+
+		//arvore raiz
+		caneta.beginPath();
+		caneta.strokeStyle = '#8B4513';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#8B4513';
+		caneta.moveTo(25,500);
+		caneta.lineTo(50,475);
+		caneta.lineTo(115,475);
+		caneta.lineTo(150,500);
+		caneta.lineTo(105,500);
+		caneta.lineTo(85,525);
+		caneta.lineTo(60,500);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//arvore tronco
+		caneta.beginPath();
+		caneta.strokeStyle = '#8B4513';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#8B4513';
+		caneta.rect(50,300,65,175);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//arvore copa
+		caneta.beginPath();
+		caneta.strokeStyle = '#008000';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#008000';
+		caneta.arc(90,200,140,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fruta
+		caneta.beginPath();
+		caneta.strokeStyle = '';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#FF8C00';
+		caneta.arc(80,300,10,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fruta
+		caneta.beginPath();
+		caneta.strokeStyle = '';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#FF8C00';
+		caneta.arc(100,100,10,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fruta
+		caneta.beginPath();
+		caneta.strokeStyle = '';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#FF8C00';
+		caneta.arc(35,150,10,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fruta
+		caneta.beginPath();
+		caneta.strokeStyle = '';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#FF8C00';
+		caneta.arc(185,240,10,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fruta
+		caneta.beginPath();
+		caneta.strokeStyle = '';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#FF8C00';
+		caneta.arc(100,200,10,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fruta
+		caneta.beginPath();
+		caneta.strokeStyle = '';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#FF8C00';
+		caneta.arc(150,150,10,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fruta
+		caneta.beginPath();
+		caneta.strokeStyle = '';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#FF8C00';
+		caneta.arc(45,245,10,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//nuvem
+		caneta.beginPath();
+		caneta.strokeStyle = '#F0F8FF';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#F0F8FF';
+		caneta.arc(600,130,30,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//nuvem
+		caneta.beginPath();
+		caneta.strokeStyle = '#F0F8FF';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#F0F8FF';
+		caneta.arc(650,120,40,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//nuvem
+		caneta.beginPath();
+		caneta.strokeStyle = '#F0F8FF';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#F0F8FF';
+		caneta.arc(700,100,60,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//nuvem
+		caneta.beginPath();
+		caneta.strokeStyle = '#F0F8FF';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#F0F8FF';
+		caneta.arc(750,115,40,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//casa
+		caneta.beginPath();
+		caneta.strokeStyle = "#000000";
+		caneta.lineWidth = 3;
+		caneta.fillStyle = "#F8F8FF";
+		caneta.rect(150,300,550,250);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//tijolos parede janela	
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = "#D2691E";
+		caneta.rect(405,525,50,25);//1
+		caneta.rect(460,525,50,25);
+		caneta.rect(515,525,50,25);
+		caneta.rect(570,525,50,25);
+		caneta.rect(625,525,50,25);
+		caneta.rect(680,525,20,25);
+		
+		caneta.rect(400,495,20,25);//2
+		caneta.rect(425,495,50,25);
+		caneta.rect(480,495,50,25);
+		caneta.rect(535,495,50,25);
+		caneta.rect(590,495,50,25);
+		caneta.rect(645,495,50,25);
+		
+		caneta.rect(405,465,50,25);//3
+		caneta.rect(460,465,50,25);
+		caneta.rect(515,465,50,25);
+		caneta.rect(570,465,50,25);
+		caneta.rect(625,465,50,25);
+		caneta.rect(680,465,20,25);
+		
+		caneta.rect(400,435,20,25);//4
+		caneta.rect(425,435,50,25);
+		caneta.rect(480,435,50,25);
+		caneta.rect(535,435,50,25);
+		caneta.rect(590,435,50,25);
+		caneta.rect(645,435,50,25);
+		
+		caneta.rect(405,405,50,25);//5
+		caneta.rect(460,405,50,25);
+		caneta.rect(515,405,50,25);
+		caneta.rect(570,405,50,25);
+		caneta.rect(625,405,50,25);
+		caneta.rect(680,405,20,25);
+		
+		caneta.rect(400,375,20,25);//6
+		caneta.rect(425,375,50,25);
+		caneta.rect(480,375,50,25);
+		caneta.rect(535,375,50,25);
+		caneta.rect(590,375,50,25);
+		caneta.rect(645,375,50,25);
+		
+		caneta.rect(405,345,50,25);//7
+		caneta.rect(460,345,50,25);
+		caneta.rect(515,345,50,25);
+		caneta.rect(570,345,50,25);
+		caneta.rect(625,345,50,25);
+		caneta.rect(680,345,20,25);
+		
+		caneta.rect(400,315,20,25);//8
+		caneta.rect(425,315,50,25);
+		caneta.rect(480,315,50,25);
+		caneta.rect(535,315,50,25);
+		caneta.rect(590,315,50,25);
+		caneta.rect(645,315,50,25);
+		
+		caneta.rect(405,300,50,10);//9
+		caneta.rect(460,300,50,10);
+		caneta.rect(515,300,50,10);
+		caneta.rect(570,300,50,10);
+		caneta.rect(625,300,50,10);
+		caneta.rect(680,300,20,10);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//tijolo parede porta
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = "#D2691E";
+		caneta.rect(155,525,50,25);//1
+		caneta.rect(210,525,50,25);
+		caneta.rect(265,525,50,25);
+		caneta.rect(320,525,50,25);
+		caneta.rect(375,525,25,25);
+		
+		caneta.rect(345,495,50,25);//2
+		caneta.rect(290,495,50,25);
+		caneta.rect(235,495,50,25);
+		caneta.rect(180,495,50,25);
+		caneta.rect(150,495,25,25);
+		
+		caneta.rect(155,465,50,25);//3
+		caneta.rect(210,465,50,25);
+		caneta.rect(265,465,50,25);
+		caneta.rect(320,465,50,25);
+		caneta.rect(375,465,25,25);
+		
+		caneta.rect(345,435,50,25);//4
+		caneta.rect(290,435,50,25);
+		caneta.rect(235,435,50,25);
+		caneta.rect(180,435,50,25);
+		caneta.rect(150,435,25,25);
+		
+		caneta.rect(155,405,50,25);//5
+		caneta.rect(210,405,50,25);
+		caneta.rect(265,405,50,25);
+		caneta.rect(320,405,50,25);
+		caneta.rect(375,405,25,25);
+		
+		caneta.rect(345,375,50,25);//6
+		caneta.rect(290,375,50,25);
+		caneta.rect(235,375,50,25);
+		caneta.rect(180,375,50,25);
+		caneta.rect(150,375,25,25);
+		
+		caneta.rect(155,345,50,25);//7
+		caneta.rect(210,345,50,25);
+		caneta.rect(265,345,50,25);
+		caneta.rect(320,345,50,25);
+		caneta.rect(375,345,25,25);
+		
+		caneta.rect(345,315,50,25);//8
+		caneta.rect(290,315,50,25);
+		caneta.rect(235,315,50,25);
+		caneta.rect(180,315,50,25);
+		caneta.rect(150,315,25,25);
+		
+		caneta.rect(155,300,50,10);//9
+		caneta.rect(210,300,50,10);
+		caneta.rect(265,300,50,10);
+		caneta.rect(320,300,50,10);
+		caneta.rect(375,300,25,10);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//telhado frontal
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 3;
+		caneta.fillStyle = '#B22222';
+		caneta.moveTo(150,300);
+		caneta.lineTo(300,150);
+		caneta.lineTo(400,300);
+		caneta.lineTo(150,300);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//telhado lateral
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 3;
+		caneta.fillStyle = '#B22222';
+		caneta.moveTo(300,150);
+		caneta.lineTo(600,150);
+		caneta.lineTo(700,300);
+		caneta.lineTo(400,300);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//telha
+		caneta.beginPath();
+		caneta.strokeStyle = '#CD853F';
+		caneta.lineWidth = 2;
+		caneta.moveTo(321,180);
+		caneta.lineTo(621,180);
+		caneta.moveTo(341,210);
+		caneta.lineTo(641,210);
+		caneta.moveTo(361,240);
+		caneta.lineTo(661,240);
+		caneta.moveTo(381,270);
+		caneta.lineTo(681,270);
+		caneta.stroke();
+		caneta.closePath();
+		
+		//janela telhado
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#48D1CC';
+		caneta.arc(285,240,40,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//vidro telhado
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 1;
+		caneta.moveTo(285,200);
+		caneta.lineTo(285,280);		
+		caneta.moveTo(325,240);
+		caneta.lineTo(245,240);
+		caneta.stroke();
+		caneta.closePath();
+		
+		//coluna
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 3;
+		caneta.moveTo(400,550);
+		caneta.lineTo(400,300);
+		caneta.stroke();
+		caneta.closePath();
+		
+		//janela porta esquerda
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#7FFFD4';
+		caneta.moveTo(500,375);
+		caneta.lineTo(450,350);
+		caneta.lineTo(450,500);
+		caneta.lineTo(500,475);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//janela porta direita
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#7FFFD4';
+		caneta.moveTo(600,375);
+		caneta.lineTo(650,350);
+		caneta.lineTo(650,500);
+		caneta.lineTo(600,475);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//janela
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#B0E0E6';
+		caneta.rect(500,375,100,100);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//vidro
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 2;
+		caneta.fillStyle = '#F8F8FF';
+		caneta.moveTo(550,475);// vidro vertical chao
+		caneta.lineTo(550,375);// vidro vertical alto
+		caneta.moveTo(500,425);// vidro horizontal esquerda
+		caneta.lineTo(600,425);// vidro horizontal direita
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//porta
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 3;
+		caneta.fillStyle = '#A0522D';
+		caneta.rect(225,400,100,150);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//macaneta
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = '#DAA520';
+		caneta.arc(243,475,8,0,2*Math.PI);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//fechadura
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 2;
+		caneta.moveTo(243,472);
+		caneta.lineTo(243,478);
+		caneta.stroke();
+		caneta.closePath();
+		
+		//tapete
+		caneta.beginPath();
+		caneta.strokeStyle = '#000000';
+		caneta.lineWidth = 1;
+		caneta.fillStyle = "#F4A460";
+		caneta.moveTo(165,600);
+		caneta.lineTo(225,550);
+		caneta.lineTo(325,550);
+		caneta.lineTo(265,600);
+		caneta.stroke();
+		caneta.fill();
+		caneta.closePath();
+		
+		//welcome
+		caneta.beginPath();
+		caneta.strokeStyle = '#9400D3';
+		caneta.lineWidth = 3;
+		caneta.font = '14px Arial';		
+		caneta.rotate(6 * Math.PI / 180);
+		caneta.fillStyle = '#000000';
+		caneta.fillText('welcome',275,550);
+		caneta.closePath();
+	</script>
+</body>
+</html>
